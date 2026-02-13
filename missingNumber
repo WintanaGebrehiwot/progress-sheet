@@ -1,0 +1,13 @@
+class Solution(object):
+    def missingNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        for i in range(0,max(nums)):
+            for j in nums:
+                if max(nums)==1:
+                    return 2
+                elif i not in nums:
+                    return i
+          
