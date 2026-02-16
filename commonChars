@@ -1,0 +1,16 @@
+class Solution(object):
+    def commonChars(self, words):
+        """
+        :type words: List[str]
+        :rtype: List[str]
+        """
+        common=list(words[0])
+        for word in words[1:]:
+            arr=[]
+            for ch in common:
+                if ch in word:
+                    arr.append(ch)
+                    word=word.replace(ch,"",1)
+            common = arr
+        return common
+
