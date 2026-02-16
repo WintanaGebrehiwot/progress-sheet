@@ -1,0 +1,17 @@
+def suma(elements):
+    n = len(elements)
+    for i in range(n):
+        for j in range(n):
+            for k in range(n):
+                if i != j and i != k and j != k:
+                    if elements[i] == elements[j] + elements[k]:
+                        print("yes")
+                        return
+    print("no")
+ 
+ 
+t = int(input())
+ 
+for _ in range(t):
+    elements = list(map(int, input().split()))
+    suma(elements)
