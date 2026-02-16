@@ -1,0 +1,10 @@
+def watermelon(num):
+    for i in range(1, num):
+        j = num - i
+        if i % 2 == 0 and j % 2 == 0:
+            print("Yes")
+            return
+    print("No")
+ 
+n = int(input())
+watermelon(n)
