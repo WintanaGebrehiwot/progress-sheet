@@ -1,0 +1,9 @@
+def soldier(k,w,n):
+    total=k*w*(w+1)//2
+    if (total-n)<0:
+        print(0)
+    else:
+        print(total-n)
+    
+k, n, w = map(int, input().split())   
+soldier(k,w,n)
