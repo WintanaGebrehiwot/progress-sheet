@@ -1,0 +1,11 @@
+def WayTooLongWords():
+    t=int(input())
+    for i in range(t):
+        words=input()
+        
+        if len(words)>10:
+            print (words[0]+str(len(words)-2)+ words[len(words)-1])
+        else:
+            print(words)
+            
+WayTooLongWords()
