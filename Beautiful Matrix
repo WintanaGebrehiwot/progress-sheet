@@ -1,0 +1,19 @@
+def beautiful():
+    for i in range (5):
+        for j in range(5):
+            if matrix[i][j]==1:
+                moves=abs(2-i)+abs(2-j)
+    print(moves) 
+    
+matrix = []
+ 
+try:
+    while True:
+        row = list(map(int, input().split()))
+        if not row:  
+            break
+        matrix.append(row)
+except EOFError:
+    pass 
+ 
+beautiful()
