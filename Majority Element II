@@ -1,0 +1,23 @@
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        if len(nums)<3 and len(nums)==len(set(nums)):
+            return nums
+        
+        else:
+            new=[]
+            count={}
+            for i in nums:
+                if i in count:
+                    count[i]+=1
+                else:
+                    count[i]=1
+            for key in count:            
+                if count[key]>len(nums)//3:
+                    new.append(key)
+        return new
+
+        
