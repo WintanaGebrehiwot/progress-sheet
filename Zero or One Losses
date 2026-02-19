@@ -1,0 +1,29 @@
+class Solution(object):
+    def findWinners(self, matches):
+        """
+        :type matches: List[List[int]]
+        :rtype: List[List[int]]
+        """
+        winner_1=[]
+        winner_2=[]
+        lose_count={}
+        for (winner,loser) in matches:
+            if winner not in lose_count:
+                lose_count[winner]=0
+            
+            if loser in lose_count:
+                lose_count[loser]+=1
+            else:
+                lose_count[loser]=1
+
+        for player in lose_count:
+            if lose_count[player]==0:
+                winner_1.append(player)
+            elif lose_count[player]==1:
+                winner_2.append(player)
+        
+        return [sorted(winner_1), sorted(winner_2)]
+
+                
+            
+        
