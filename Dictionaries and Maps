@@ -1,0 +1,18 @@
+t=int(input())
+phonebook={}
+
+for i in range(t):
+    name,phone=input().split()
+    phonebook[name]=phone
+    
+new=[]    
+while True:
+    try:
+        tofind = input()
+        if tofind in phonebook:
+            new.append(tofind + "=" + phonebook[tofind])
+        else:
+            new.append("Not found")
+    except EOFError:
+        break
+print("\n".join(new))
