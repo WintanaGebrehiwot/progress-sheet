@@ -1,0 +1,14 @@
+s,t=map(int, input().split())
+num1 = list(map(int, input().split()))
+num2 = list(map(int, input().split()))
+ 
+first=0
+second=0
+result=[]
+ 
+for second in range(t):
+  while first<s and num1[first]<num2[second]:
+    first+=1
+  result.append(first)
+ 
+print(*result)
