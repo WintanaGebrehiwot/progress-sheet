@@ -1,0 +1,24 @@
+class Solution(object):
+    def countVowelSubstrings(self, word):
+        """
+        :type word: str
+        :rtype: int
+        """
+        left=0
+        count=0
+        vowel=set("aeiou")
+        for right in range(len(word)):
+            if word[right] not in vowel:
+                left=right+1
+                continue
+
+            seen=set()
+            for i in range(right,left-1,-1):
+                if word[i] not in vowel:
+                    break
+                seen.add(word[i])
+                if len(seen)==5:
+                    count+=1
+
+        return count
+        
