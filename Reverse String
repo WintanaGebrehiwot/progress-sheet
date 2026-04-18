@@ -1,0 +1,16 @@
+class Solution(object):
+    def reverseString(self, s):
+        """
+        :type s: List[str]
+        :rtype: None Do not return anything, modify s in-place instead.
+        """
+        first=0
+        second=len(s)-1
+
+        while first<len(s)/2:
+            s[first],s[second]=s[second],s[first]
+            first+=1
+            second-=1
+
+        return s
+        
